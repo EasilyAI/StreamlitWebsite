@@ -1,0 +1,49 @@
+content:
+  - element_type: "h1"
+    text: "Our services and offerings"
+  - element_type: "h2"
+    text: "Empowering Non-Tech SMBs with Advanced AI Services"
+  - element_type: "p"
+    text: "Our company specializes in providing cutting-edge language model (LLM) services tailored for small to medium-sized businesses without technical expertise. Our core offerings are designed to enhance user interaction, increase sales, streamline processes, and provide insightful data analysis."
+  
+  
+  - element_type: "h3"
+    text: "1. Smart Chatbot Systems"
+  - element_type: "p"
+    text: "Our chatbot solutions are designed to interact with users in a way that feels natural and intuitive. These systems are perfect for businesses looking to improve customer satisfaction and increase sales conversions, enhancing the sales experience on their websites."
+  - element_type: "p"
+    text: "<b>AI Search Bar</b>: Replace traditional search bars with an AI-powered solution that understands and processes free text inputs such as:"
+  - element_type: "ul"
+    text: 
+      <li><b>"Home office setup"* / "Stuff for a picnic"</b> - Retrieve a list of cross-category products to increase sales.</li>
+      <li><b>"Sensitive skin"</b> - Identify user-specific requirements or characteristics and suggest a bundle of custom products.</li>
+      <li><b>"Garden kit"</b> - Create a DIY list with instructions for your customers, based on your products.</li>
+
+
+  - element_type: "h3"
+    text: "2. Large text helpers"
+  - element_type: "p"
+    text: "Navigate effortlessly through vast amounts of complex information with our GPT-style chatbot, designed to streamline access across different document types:"
+  - element_type: "p"
+    text: "<b>AI Navigator</b>: Simplify information retrieval by loading your extensive documents into our AI navigator. Engage in natural conversations and ask any question to quickly locate specific details across different document types:"
+  - element_type: "ul"
+    text: 
+      <li><b>"Support docs"</b> - Receive precise, well-instructed answers to your questions with links to the exact information.</li>
+      <li><b>"Legal databases"</b> - Enhance retrieval from archive knowledge to be within reach of a question.</li>
+      <li><b>"Company policy"</b> - Clarify complex policy nuances with straightforward explanations from our chatbot, ensuring employees grasp intricate details easily and accurately.</li>
+
+
+
+  - element_type: "h3"
+    text: "3. General AI Capabilities implementation"
+  - element_type: "p"
+    text: "AI and LLM technologies enable automatic text-based tasks such as content generation, summarizing any type of text, and extracting specific information as requested. These capabilities can be applied to various business tasks."
+  - element_type: "p"
+    text: "Harness the power of AI to automate processes, replace manual work, and enhance efficiency across different business functions such as:"
+  - element_type: "ul"
+    text:    
+      <li><b>Write emails</b> - use content generation to save time on manual and repetitive tasks.</li>
+      <li><b>Summarize user reviews</b> - Utilize AI text summarization capabilities to highlight key insights and sentiments from any text source.</li>
+      <li><b>Find trends in online news</b> - Automate the extraction of relevant information from daily reports, news updates, or any other textual source.</li>
+  - element_type: "p"
+    text: "We provide <b>custom solutions</b> tailored to your specific needs. Whether you require a unique RAG system, specialized fine-tuning, or advanced LLM functionalities, our team is ready to develop a solution that meets your business objectives."

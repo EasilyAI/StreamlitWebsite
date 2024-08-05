@@ -1,0 +1,82 @@
+/* --------------- HEADING ---------------  */
+
+header {
+    background: transparent !important;
+}
+
+.description-box {
+    /* background-color: #f0f0f0; */
+    /* padding: 10px; */
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    align-items: center;
+    color: #424242;
+    font-size: 22px;
+}
+/*  --------------- SEARCH BAR ---------------  */
+.stTextInput input::placeholder {
+    color: Gray;
+    font-size: 16px;
+}
+.st-emotion-cache-1whx7iy p {
+    color: dark Gray;
+    font-size: 20px;
+    border-radius: 1rem;
+}
+
+
+/*  --------------- BUTTONS STYLING ---------------  */
+.stButton>button {
+    background-color: #d3d3d3; 
+    color: black;
+    width: 95%;
+}
+.stButton>button:hover {
+    background-color: #a9a9a9; 
+    border-color: blanchedalmond; 
+    color: black;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+
+/*  --------------- GPT ANSWER AREA ---------------  */
+.answer-box {
+    padding: 30px;
+    background-color: rgba(244,244,244);
+    border-radius: 1em;    
+    font-size: 15px;
+    --tw-bg-opacity:1 ;
+    
+    max-height: 200px;
+    overflow-y: auto;    
+    margin-bottom: 40px;
+}
+
+
+/*  --------------- CONTACT AREA ---------------  */
+
+.contact-input-container {
+    animation: fadeIn ease-in;
+}
+.contact-button-container {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    animation: fadeIn 6s;
+}
+
+/*  --------------- CONTENT PAGE - CENTERED ---------------  */
+.centered {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.paragraph {
+    font-size: 19px;
+}
