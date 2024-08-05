@@ -1,6 +1,6 @@
 import project_path
-from streamlitWeb.webUtils.pageConfig import load_default_page_config
-from streamlitWeb.webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
+from webUtils.pageConfig import load_default_page_config
+from webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
 import streamlit as st
 
 

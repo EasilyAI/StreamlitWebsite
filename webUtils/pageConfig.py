@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlitWeb.webUtils.stylingUtils import load_css
+from webUtils.stylingUtils import load_css
 import yaml
 import project_path
     

@@ -1,4 +1,4 @@
-from streamlitWeb.webUtils.OpenAiUtils  import OpenAIClient
+from webUtils.OpenAiUtils  import OpenAIClient
 
 def process_user_input(user_input, test_mode = False):
     if test_mode:

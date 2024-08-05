@@ -2,9 +2,9 @@ import streamlit as st
 import project_path
 
 from Agent import process_user_input
-from streamlitWeb.webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
-from streamlitWeb.webUtils.pageConfig import load_default_page_config, add_page_titles
-from streamlitWeb.webUtils.textUtils import (is_input_valid, type_text_gpt_style,run_process_spinner,wait)
+from webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
+from webUtils.pageConfig import load_default_page_config, add_page_titles
+from webUtils.textUtils import (is_input_valid, type_text_gpt_style,run_process_spinner,wait)
 
 # -------- PAGE TEXT VARIABLES ---------
 SPARKLES_EMOJI = ":sparkles:" #:spider_web:

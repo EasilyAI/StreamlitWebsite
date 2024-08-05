@@ -1,4 +1,4 @@
-from streamlitWeb.webUtils.pageConfig import load_default_page_config, add_centered_element,load_content_from_yaml
+from webUtils.pageConfig import load_default_page_config, add_centered_element,load_content_from_yaml
 
 # -------- LOAD PAGE CONFIG & STYLE -------
 load_default_page_config(layout="wide")
