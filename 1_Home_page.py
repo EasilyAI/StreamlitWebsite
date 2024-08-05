@@ -85,7 +85,7 @@ with st.container():
             run_process_spinner(duration=1.5)
 
         if is_input_valid(st.session_state["user_input"], SEARCH_BAR_DEFAULT_TEXT):
-            result = process_user_input(st.session_state["user_input"], test_mode= True)         
+            result = process_user_input(st.session_state["user_input"], test_mode= False)         
             st.session_state["result"] = result            
             
             type_text_gpt_style(text = st.session_state["result"], output_container=output_container, output_box_class = 'answer-box', type_effect=st.session_state["should_use_type_effect"])
