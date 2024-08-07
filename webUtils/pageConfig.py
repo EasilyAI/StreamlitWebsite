@@ -10,7 +10,7 @@ def load_default_page_config(page_title="EasilyAI",
                              page_icon=ICON_FOR_UPPER_TAB, 
                              layout= "centered",
                              css_file = "styles/style.css", 
-                             backround_img_path = "styles/backround.jpg"):
+                             backround_img_path = "styles/backround-revert.jpg"):
     
     st.logo(image=LOGO_PATH)
     st.set_page_config(page_title=page_title, page_icon=page_icon, layout= layout)
