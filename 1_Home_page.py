@@ -4,11 +4,17 @@ import project_path
 from Agent import process_user_input
 from webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
 from webUtils.pageConfig import load_default_page_config, add_page_titles
+from webUtils.stylingUtils import get_img_as_base64, get_png_img_inlined_in_text
 from webUtils.textUtils import (is_input_valid, type_text_gpt_style,run_process_spinner,wait)
 
 # -------- PAGE TEXT VARIABLES ---------
+logo_path = "styles/logo-no-backround.png"
+symbol_path = "styles/EasilyAI-symbol.png"
+logo = get_png_img_inlined_in_text(logo_path)
+symbol = get_png_img_inlined_in_text(symbol_path,output_width=50)
+
 SPARKLES_EMOJI = ":sparkles:" #:spider_web:
-HEAD_TITLE_TEXT = f"{SPARKLES_EMOJI} Save time, use AI"
+HEAD_TITLE_TEXT = f"{symbol} Save time, use AI"
 HEAD_SUB_TITLE_TEXT = "AI solutions for businesses"
 HEAD_DESCRIPTION_TEXT = """What solutions? We can do a lot of things...<br>
     <ol> 
@@ -22,10 +28,10 @@ SEARCH_BAR_HELPER_TEXT = "Write us what is your "
 
 CONTACT_EMAIL_PLACEHOLDER = "Sounds intresting? leave us your email and we'll be in touch"
 
-
+#  "![Logo](styles/logo-no-backround.png)"
 # -------- LOAD PAGE DEFAULT CONFIG & STYLE -------
 load_default_page_config()
-
+st.logo(image=logo_path)
 
 # -------- PAGE TITLE --------
 add_page_titles(HEAD_TITLE_TEXT,HEAD_SUB_TITLE_TEXT,HEAD_DESCRIPTION_TEXT)

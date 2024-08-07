@@ -15,9 +15,10 @@ def load_default_page_config(page_title="AI solutions",
 
 def add_page_titles(head_title:str, head_subtitle:str = None, head_description_text:str = None):    
     with st.container():
-        st.title(head_title)
+        st.markdown(f"<h1>{head_title}</h1>", unsafe_allow_html=True)
         if head_subtitle: 
-            st.subheader(head_subtitle)
+            st.markdown(f"<h2>{head_subtitle}</h2>", unsafe_allow_html=True)
+            # st.subheader(head_subtitle)
         if head_description_text:
             st.markdown(f'<div class="description-box">{head_description_text}</div>', unsafe_allow_html=True)
 

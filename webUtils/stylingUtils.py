@@ -31,6 +31,10 @@ def get_img_as_base64(file):
         data = f.read()
     return base64.b64encode(data).decode()
 
+def get_png_img_inlined_in_text(file_path, output_width=140):
+    base_64_img = get_img_as_base64(file_path)
+    return f"<img src='data:image/png;base64,{base_64_img}' width='{output_width}'>"
+
 
 # Find more emojis here: 
 #    https://www.webfx.com/tools/emoji-cheat-sheet/
