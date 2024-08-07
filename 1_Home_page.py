@@ -1,5 +1,4 @@
 import streamlit as st
-import project_path
 
 from Agent import process_user_input
 from webUtils.emailUtils import send_email_smtp, validate_email,get_recipient_email_contacts
