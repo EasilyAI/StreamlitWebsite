@@ -10,5 +10,4 @@ content = load_content_from_yaml('content/services.yml')
 
 # -------- ADD CENTERED CONTENT TO PAGE --------
 for element in content['content']:
-    print(element)
     add_centered_element(element_type = element['element_type'],text=element['text'])

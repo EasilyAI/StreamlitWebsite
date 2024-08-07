@@ -1,14 +1,18 @@
 import streamlit as st
-from webUtils.stylingUtils import load_css
+from webUtils.stylingUtils import load_css,get_png_img_inlined_in_text
 import yaml
 import project_path
-    
-def load_default_page_config(page_title="AI solutions", 
-                             page_icon=":sparkles:", 
+
+LOGO_PATH = "./styles/logo-no-backround.png"
+ICON_FOR_UPPER_TAB = get_png_img_inlined_in_text("./styles/EasilyAI-symbol.png",as_img_src=True)
+
+def load_default_page_config(page_title="EasilyAI", 
+                             page_icon=ICON_FOR_UPPER_TAB, 
                              layout= "centered",
                              css_file = "styles/style.css", 
                              backround_img_path = "styles/backround.jpg"):
     
+    st.logo(image=LOGO_PATH)
     st.set_page_config(page_title=page_title, page_icon=page_icon, layout= layout)
     load_css(css_file = css_file, 
          backround_img_path = backround_img_path)

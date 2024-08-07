@@ -28,10 +28,8 @@ SEARCH_BAR_HELPER_TEXT = "Write us what is your "
 
 CONTACT_EMAIL_PLACEHOLDER = "Sounds intresting? leave us your email and we'll be in touch"
 
-#  "![Logo](styles/logo-no-backround.png)"
 # -------- LOAD PAGE DEFAULT CONFIG & STYLE -------
 load_default_page_config()
-st.logo(image=logo_path)
 
 # -------- PAGE TITLE --------
 add_page_titles(HEAD_TITLE_TEXT,HEAD_SUB_TITLE_TEXT,HEAD_DESCRIPTION_TEXT)
