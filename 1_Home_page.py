@@ -93,7 +93,11 @@ with st.container():
             result = process_user_input(st.session_state["user_input"], test_mode= False)         
             st.session_state["result"] = result            
             
-            type_text_gpt_style(text = st.session_state["result"], output_container=output_container, output_box_class = 'answer-box', type_effect=st.session_state["should_use_type_effect"])
+            type_text_gpt_style(text= st.session_state["result"], 
+                                output_container= output_container, 
+                                output_box_class= 'answer-box', 
+                                type_effect= st.session_state["should_use_type_effect"]
+                                )
             st.session_state["result_printed"] = True
             st.session_state["run_gpt_clicked"] = False
             st.session_state["should_use_type_effect"] = False
@@ -104,32 +108,39 @@ with st.container():
     
     if st.session_state["result_printed"]:
         wait(1)
-        col1, col2 = st.columns([3, 1])
+        st.page_link(page= "pages/3_Contact.py", 
+                     label="[Sounds good? contact us for more info](#)")
+    
+    
+    
+    # if st.session_state["result_printed"]:
+    #     wait(1)
+    #     col1, col2 = st.columns([3, 1])
             
-        with col1:    
-            st.markdown('<div class="contact-input-container">', unsafe_allow_html=True)
-            email = st.text_input(label='Email',placeholder=CONTACT_EMAIL_PLACEHOLDER, key='email_input', label_visibility='hidden')
-            st.markdown('</div>', unsafe_allow_html=True)
+    #     with col1:    
+    #         st.markdown('<div class="contact-input-container">', unsafe_allow_html=True)
+    #         email = st.text_input(label='Email',placeholder=CONTACT_EMAIL_PLACEHOLDER, key='email_input', label_visibility='hidden')
+    #         st.markdown('</div>', unsafe_allow_html=True)
         
-        with col2:
-            st.markdown('<div class="contact-button-container">', unsafe_allow_html=True)
-            submit = st.button("Submit")
-            st.markdown('</div>', unsafe_allow_html=True)
+    #     with col2:
+    #         st.markdown('<div class="contact-button-container">', unsafe_allow_html=True)
+    #         submit = st.button("Submit")
+    #         st.markdown('</div>', unsafe_allow_html=True)
 
         
-        if submit:
-            st.session_state["submit_clicked"] = True
+    #     if submit:
+    #         st.session_state["submit_clicked"] = True
         
      
-    if st.session_state["submit_clicked"] and "email_input" in st.session_state:
-        if not st.session_state["email_input"] or not validate_email(st.session_state["email_input"]):
-            st.error('Please enter a valid email address.')
-        else:
-            is_email_sent = send_email_smtp(subject=f"New contact request submitted - {email}", body_dict = dict(st.session_state), to_email=get_recipient_email_contacts())
-            print("email sent: ",is_email_sent)
+    # if st.session_state["submit_clicked"] and "email_input" in st.session_state:
+    #     if not st.session_state["email_input"] or not validate_email(st.session_state["email_input"]):
+    #         st.error('Please enter a valid email address.')
+    #     else:
+    #         is_email_sent = send_email_smtp(subject=f"New contact request submitted - {email}", body_dict = dict(st.session_state), to_email=get_recipient_email_contacts())
+    #         print("email sent: ",is_email_sent)
 
-            if is_email_sent:                 
-                st.success('Request submitted successfully! 🤓')
-                st.session_state["submit_clicked"] = False
-            else:
-                st.error('Error submitting contact details')
+    #         if is_email_sent:                 
+    #             st.success('Request submitted successfully! 🤓')
+    #             st.session_state["submit_clicked"] = False
+    #         else:
+    #             st.error('Error submitting contact details')
