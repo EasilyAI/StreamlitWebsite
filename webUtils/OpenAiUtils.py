@@ -1,9 +1,10 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 import os
-env_path = os.path.join(os.path.dirname(__file__),'..','streamlitWeb','.env')
+env_path = os.path.join(os.path.dirname(__file__),'..','.env')
 
 load_dotenv(dotenv_path=env_path)
+
 class OpenAIClient:
     def __init__(self, 
                 organization=os.getenv('OPEN_AI_ORG_ID'),
