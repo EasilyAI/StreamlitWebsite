@@ -9,12 +9,17 @@ header {
     /* padding: 10px; */
     border-radius: 10px;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     align-items: center;
     color: #424242;
     font-size: 22px;
 }
 /*  --------------- SEARCH BAR ---------------  */
+.stTextInput div {
+    display:flex;
+    align-items: center;
+    margin-bottom: 0;
+}
 .stTextInput input::placeholder {
     color: Gray;
     font-size: 16px;
@@ -23,6 +28,10 @@ header {
     color: dark Gray;
     font-size: 20px;
     border-radius: 1rem;
+}
+
+.stTextInput input {
+    padding: 6px;
 }
 
 
@@ -35,15 +44,17 @@ header {
 .stButton>button:hover {
     background-color: #a9a9a9; 
     border-color: blanchedalmond; 
+    align-items: center;
     color: black;
 }
 .button-container {
-    display: flex;
-    align-items: center;
-    height: 35px;
+    height: 28px;
 }
-
-
+@media (max-width: 640px) {
+    .st-emotion-cache-1dxb92l {
+        min-width: 0 ;
+    }
+}
 /*  --------------- GPT ANSWER AREA ---------------  */
 .answer-box {
     padding: 30px;
