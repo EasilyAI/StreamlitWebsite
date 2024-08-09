@@ -29,6 +29,7 @@ response instructions:
  - Follow the response structure
  - Focus on what the LLM can solve and less on the technical side.
  - If the customer need is empty, not clear or not a proper text, mention it kindly and describe our value proposition, suggest that we reach out to talk in person.
+ - Detect the input language and answer in the same language.
 
 customer needs: {user_input} \n
 your short response:
