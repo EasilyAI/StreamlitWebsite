@@ -66,8 +66,9 @@ header {
     max-height: 200px;
     overflow-y: auto;    
     margin-bottom: 40px;
+    scrollbar-width: 10px; /* Makes the scrollbar thinner */
+    scrollbar-color: rgba(128,128,128,1) rgba(200,200,200,0.5) ; /* Scrollbar thumb and track color */
 }
-
 
 /*  --------------- CONTACT AREA ---------------  */
 
