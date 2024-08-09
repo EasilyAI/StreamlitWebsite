@@ -12,16 +12,20 @@ symbol = get_png_img_inlined_in_text(symbol_path,output_width=50)
 
 SPARKLES_EMOJI = ":sparkles:" #:spider_web:
 HEAD_TITLE_TEXT = f"{symbol} Save time, use AI"
-HEAD_SUB_TITLE_TEXT = "AI solutions for businesses"
-HEAD_DESCRIPTION_TEXT = """What solutions? We can do a lot of things...<br>
-    <ol> 
-        <li>Shoot us a couple of lines on your needs or type of business</li>
-        <li>Our <b>AI will do the rest</b></li>
-    <ol>"""
+HEAD_SUB_TITLE_TEXT = None
+HEAD_DESCRIPTION_TEXT = """Add <b>custom GPT capabilities</b> to your business"""
+BULLETS ="""We will tailor a solution for <b>your</b> needs, just write us one of the following options:
+<ul> 
+        <li>Your problem or need</li>
+        <li>Your business in a line</li>
+        <li>The capability you are looking for</li>
+    <ul>Hit <b>run</b> and  wait 😎"""
 
-SEARCH_BAR_INSTRUCTION_TEXT = "Enter the kind of solution you are looking for"
-SEARCH_BAR_DEFAULT_TEXT = "You can also write about your business, or just leave it empty"
-SEARCH_BAR_HELPER_TEXT = "Write us what is your "
+SEARCH_BAR_INSTRUCTION_TEXT = ""#"Enter the kind of solution you are looking for"
+SEARCH_BAR_DEFAULT_TEXT = "You can also leave it empty..."
+SEARCH_BAR_HELPER_TEXT = """Once you write us a little about your business, the need or the problem you are trying to solve, we will use an AI ​​engine to match your need with our capabilities.
+Then generate the possible capabilities that we can integrate or add into your business.
+If you choose to leave the search bar blank, we'll simply let you know about our business and what we do :)"""
 
 CONTACT_EMAIL_PLACEHOLDER = "Sounds intresting? leave us your email and we'll be in touch"
 
@@ -30,7 +34,7 @@ load_default_page_config()
 
 # -------- PAGE TITLE --------
 add_page_titles(HEAD_TITLE_TEXT,HEAD_SUB_TITLE_TEXT,HEAD_DESCRIPTION_TEXT)
-
+st.markdown(BULLETS,unsafe_allow_html=True)
 
 # -------- INITIATE SESSION STATE -----------
 for state in ["user_input","result"]:
