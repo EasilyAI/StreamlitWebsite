@@ -108,9 +108,7 @@ with st.container():
     
     if st.session_state["result_printed"]:
         wait(1)
-        st.page_link(page= "pages/3_Contact.py", 
-                     label="[Sounds good? contact us for more info](#)")
-    
+        st.page_link("pages/3_Contact.py", label="Sounds good? :blue[contact us] for more info")
     
     
     # if st.session_state["result_printed"]:
