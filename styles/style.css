@@ -69,6 +69,16 @@ header {
     scrollbar-width: 10px; /* Makes the scrollbar thinner */
     scrollbar-color: rgba(128,128,128,1) rgba(200,200,200,0.5) ; /* Scrollbar thumb and track color */
 }
+.answer-box-contact {
+    padding: 30px;
+    background-color: rgba(244,244,244);
+    border-radius: 1em;    
+    font-size: 16px;
+    --tw-bg-opacity:1 ;
+    
+    max-height: 300px;
+    overflow-y: auto;    
+}
 
 /*  --------------- CONTACT AREA ---------------  */
 

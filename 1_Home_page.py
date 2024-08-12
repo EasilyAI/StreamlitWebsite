@@ -37,7 +37,7 @@ add_page_titles(HEAD_TITLE_TEXT,HEAD_SUB_TITLE_TEXT,HEAD_DESCRIPTION_TEXT)
 st.markdown(BULLETS,unsafe_allow_html=True)
 
 # -------- INITIATE SESSION STATE -----------
-for state in ["user_input","result"]:
+for state in ["user_input","result","user_input_backup","markdown_result"]:
     if state not in st.session_state:
         st.session_state[state] = ""
 
@@ -80,6 +80,7 @@ with st.container():
     if run_gpt:
         st.session_state["run_gpt_clicked"] = True
         st.session_state["should_use_type_effect"] = True
+        st.session_state["user_input_backup"] = user_input
     
     if clear:
         st.session_state['clear_form'] = True
@@ -93,11 +94,11 @@ with st.container():
             result = process_user_input(st.session_state["user_input"], test_mode= False)         
             st.session_state["result"] = result            
             
-            type_text_gpt_style(text= st.session_state["result"], 
-                                output_container= output_container, 
-                                output_box_class= 'answer-box', 
-                                type_effect= st.session_state["should_use_type_effect"]
-                                )
+            st.session_state["markdown_result"] = type_text_gpt_style(text= st.session_state["result"], 
+                                                                        output_container= output_container, 
+                                                                        output_box_class= 'answer-box', 
+                                                                        type_effect= st.session_state["should_use_type_effect"]
+                                                                        )
             st.session_state["result_printed"] = True
             st.session_state["run_gpt_clicked"] = False
             st.session_state["should_use_type_effect"] = False

@@ -7,7 +7,6 @@ import streamlit as st
 # -------- LOAD PAGE CONFIG & STYLE -------
 load_default_page_config()
 
-
 # -------- INITIATE PAGE VARIABLES -------
 for user_input in ['name_input','phone_input','email_input']:
     if user_input not in st.session_state:
@@ -36,31 +35,41 @@ with st.form(key='contact_form'):
     with col2:
         clear_button = st.form_submit_button('Clear Form', use_container_width=True)
 
+if st.session_state['result']:
+    USER_CONTENT = f"""
+    Don't worry, we saved everything<br>
+    <br>
+    <b>Your request was</b> : {st.session_state['user_input_backup']} <br>
+    <br>
+    <b>Our AI engine suggested</b> : {st.session_state['markdown_result']}
+            """
+    with st.container():
+        st.markdown(f'<div class=answer-box-contact>{USER_CONTENT}</div>', unsafe_allow_html=True)
 
 # -------- BUTTONS FUNCTIONALITY -------
-    if submit_button:
-        if not email or not validate_email(email):
-            st.error('Please enter a valid email address.')
-        else:
-            st.session_state.name = name
-            st.session_state.phone = phone
-            st.session_state.email = email        
+if submit_button:
+    if not email or not validate_email(email):
+        st.error('Please enter a valid email address.')
+    else:
+        st.session_state.name = name
+        st.session_state.phone = phone
+        st.session_state.email = email        
 
-            data = {
-                'name': name,
-                'phone': phone,
-                'email': email
-            }
-            
-            is_email_sent = send_email_smtp(subject=f"New contact request submitted - {email}", body_dict = data, to_email=get_recipient_email_contacts())
-            
-            if is_email_sent:                 
-                st.success('Form submitted successfully! 🤓')
-            else:
-                st.error('Error submitting form')
+        data = {
+            'name': name,
+            'phone': phone,
+            'email': email
+        }
         
-        st.session_state.clear_form = False
-            
-    if clear_button:
-        st.session_state.clear_form = True
-        st.rerun()
+        is_email_sent = send_email_smtp(subject=f"New contact request submitted - {email}", body_dict = data, to_email=get_recipient_email_contacts())
+        
+        if is_email_sent:                 
+            st.success('Form submitted successfully! 🤓')
+        else:
+            st.error('Error submitting form')
+    
+    st.session_state.clear_form = False
+        
+if clear_button:
+    st.session_state.clear_form = True
+    st.rerun()
