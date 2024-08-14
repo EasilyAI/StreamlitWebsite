@@ -8,12 +8,13 @@ import streamlit as st
 load_default_page_config()
 
 # -------- INITIATE PAGE VARIABLES -------
-for user_input in ['name_input','phone_input','email_input']:
-    if user_input not in st.session_state:
-        st.session_state[user_input] = ''
+for state in ['name_input','phone_input','email_input']:
+    if state not in st.session_state:
+        st.session_state[state] = ''
 
-if 'clear_form' not in st.session_state:
-    st.session_state.clear_form = False
+for state in ["result","clear_form"]:
+    if state not in st.session_state:
+        st.session_state.clear_form = False
 
 if st.session_state.clear_form:
     st.session_state.name_input = ''
@@ -55,11 +56,12 @@ if submit_button:
         st.session_state.phone = phone
         st.session_state.email = email        
 
-        data = {
-            'name': name,
-            'phone': phone,
-            'email': email
-        }
+        data = st.session_state
+        # data = {
+        #     'name': name,
+        #     'phone': phone,
+        #     'email': email
+        # }
         
         is_email_sent = send_email_smtp(subject=f"New contact request submitted - {email}", body_dict = data, to_email=get_recipient_email_contacts())
         
