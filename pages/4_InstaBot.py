@@ -1,10 +1,13 @@
 import streamlit as st
 
 from webUtils.pageConfig import load_default_page_config
+from urllib.parse import urlparse, parse_qs
 
 # -------- LOAD PAGE CONFIG & STYLE -------
 load_default_page_config(layout="wide")
 
+
+# -------- TITLE AND BUTTONS -------
 st.title("Sign up for the InstaBot service")
 
 st.markdown(
@@ -32,3 +35,12 @@ st.markdown(
 #     '</a>',
 #     unsafe_allow_html=True
 # )
+
+
+# Extract the query parameters from the URL
+query_params = st.experimental_get_query_params()
+message = query_params.get("message", [None])[0]  # Get the "message" parameter
+
+# Display the message in Streamlit if it's present
+if message:
+    st.success(message)
