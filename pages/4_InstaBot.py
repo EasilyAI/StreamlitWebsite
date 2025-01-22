@@ -19,22 +19,6 @@ st.markdown(
     '</a>',
     unsafe_allow_html=True
 )
-# st.markdown(
-#     '<a href="https://rw7uq0spp4.execute-api.us-east-1.amazonaws.com/business-deauth">'
-#     '<button style="background-color:#4CAF50; color:white; border:none; padding:10px; font-size:16px; cursor:pointer;">'
-#     'Deauthorize'
-#     '</button>'
-#     '</a>',
-#     unsafe_allow_html=True
-# )
-# st.markdown(
-#     '<a href="https://rw7uq0spp4.execute-api.us-east-1.amazonaws.com/data-deletion">'
-#     '<button style="background-color:#4CAF50; color:white; border:none; padding:10px; font-size:16px; cursor:pointer;">'
-#     'Data Deletion'
-#     '</button>'
-#     '</a>',
-#     unsafe_allow_html=True
-# )
 
 
 # Extract the query parameters from the URL
